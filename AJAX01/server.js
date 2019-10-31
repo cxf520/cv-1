@@ -33,7 +33,7 @@ var server = http.createServer(function (request, response) {
     const result = array.map(item => `<li>${item.id}</li>`).join('')
     string = string.replace('{{ page1 }}', `<ul id="xxx">${result}</ul>`)
 
-    string = string.replace('{{ main1 }}', `/main.js`)
+    string = string.replace('{{ main1 }}', '/main.js')
 
     response.write(string)
     response.end()
