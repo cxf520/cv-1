@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*::before {
+  box-sizing: border-box;
+}
+
+*::after {
+  box-sizing: border-box;
+}
+
+#html {
+  word-break: break-all;
+}
+
+#divWrap {
+  position: fixed;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#div {
+  position: relative;
+}
+
+#div::before,
+#div::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+@media (max-width: 500px) {
+  #html {
+    height: 50vh;
+    overflow: scroll;
+  }
+
+  #divWrap {
+    height: 45vh;
+    position: relative;
+    top: 5vh;
+    left: 0;
+  }
+}
